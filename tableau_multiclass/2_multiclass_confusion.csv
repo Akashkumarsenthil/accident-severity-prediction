@@ -1,0 +1,113 @@
+Model,Actual,Predicted,Count,Percentage
+Logistic Regression,Sev_1,Sev_1,1813,75.54
+Logistic Regression,Sev_1,Sev_2,144,6.0
+Logistic Regression,Sev_1,Sev_3,347,14.46
+Logistic Regression,Sev_1,Sev_4,96,4.0
+Logistic Regression,Sev_2,Sev_1,590,24.58
+Logistic Regression,Sev_2,Sev_2,796,33.17
+Logistic Regression,Sev_2,Sev_3,513,21.38
+Logistic Regression,Sev_2,Sev_4,501,20.88
+Logistic Regression,Sev_3,Sev_1,401,16.71
+Logistic Regression,Sev_3,Sev_2,323,13.46
+Logistic Regression,Sev_3,Sev_3,1347,56.12
+Logistic Regression,Sev_3,Sev_4,329,13.71
+Logistic Regression,Sev_4,Sev_1,348,14.5
+Logistic Regression,Sev_4,Sev_2,524,21.83
+Logistic Regression,Sev_4,Sev_3,629,26.21
+Logistic Regression,Sev_4,Sev_4,899,37.46
+Decision Tree,Sev_1,Sev_1,2105,87.71
+Decision Tree,Sev_1,Sev_2,89,3.71
+Decision Tree,Sev_1,Sev_3,137,5.71
+Decision Tree,Sev_1,Sev_4,69,2.88
+Decision Tree,Sev_2,Sev_1,116,4.83
+Decision Tree,Sev_2,Sev_2,1136,47.33
+Decision Tree,Sev_2,Sev_3,458,19.08
+Decision Tree,Sev_2,Sev_4,690,28.75
+Decision Tree,Sev_3,Sev_1,227,9.46
+Decision Tree,Sev_3,Sev_2,470,19.58
+Decision Tree,Sev_3,Sev_3,1442,60.08
+Decision Tree,Sev_3,Sev_4,261,10.88
+Decision Tree,Sev_4,Sev_1,127,5.29
+Decision Tree,Sev_4,Sev_2,619,25.79
+Decision Tree,Sev_4,Sev_3,267,11.12
+Decision Tree,Sev_4,Sev_4,1387,57.79
+Random Forest,Sev_1,Sev_1,2199,91.62
+Random Forest,Sev_1,Sev_2,35,1.46
+Random Forest,Sev_1,Sev_3,88,3.67
+Random Forest,Sev_1,Sev_4,78,3.25
+Random Forest,Sev_2,Sev_1,131,5.46
+Random Forest,Sev_2,Sev_2,1090,45.42
+Random Forest,Sev_2,Sev_3,497,20.71
+Random Forest,Sev_2,Sev_4,682,28.42
+Random Forest,Sev_3,Sev_1,249,10.38
+Random Forest,Sev_3,Sev_2,134,5.58
+Random Forest,Sev_3,Sev_3,1653,68.88
+Random Forest,Sev_3,Sev_4,364,15.17
+Random Forest,Sev_4,Sev_1,73,3.04
+Random Forest,Sev_4,Sev_2,383,15.96
+Random Forest,Sev_4,Sev_3,78,3.25
+Random Forest,Sev_4,Sev_4,1866,77.75
+Gradient Boosting,Sev_1,Sev_1,2204,91.83
+Gradient Boosting,Sev_1,Sev_2,42,1.75
+Gradient Boosting,Sev_1,Sev_3,93,3.88
+Gradient Boosting,Sev_1,Sev_4,61,2.54
+Gradient Boosting,Sev_2,Sev_1,109,4.54
+Gradient Boosting,Sev_2,Sev_2,1215,50.62
+Gradient Boosting,Sev_2,Sev_3,478,19.92
+Gradient Boosting,Sev_2,Sev_4,598,24.92
+Gradient Boosting,Sev_3,Sev_1,231,9.62
+Gradient Boosting,Sev_3,Sev_2,199,8.29
+Gradient Boosting,Sev_3,Sev_3,1646,68.58
+Gradient Boosting,Sev_3,Sev_4,324,13.5
+Gradient Boosting,Sev_4,Sev_1,83,3.46
+Gradient Boosting,Sev_4,Sev_2,467,19.46
+Gradient Boosting,Sev_4,Sev_3,130,5.42
+Gradient Boosting,Sev_4,Sev_4,1720,71.67
+K-Nearest Neighbors,Sev_1,Sev_1,1983,82.62
+K-Nearest Neighbors,Sev_1,Sev_2,127,5.29
+K-Nearest Neighbors,Sev_1,Sev_3,175,7.29
+K-Nearest Neighbors,Sev_1,Sev_4,115,4.79
+K-Nearest Neighbors,Sev_2,Sev_1,430,17.92
+K-Nearest Neighbors,Sev_2,Sev_2,846,35.25
+K-Nearest Neighbors,Sev_2,Sev_3,592,24.67
+K-Nearest Neighbors,Sev_2,Sev_4,532,22.17
+K-Nearest Neighbors,Sev_3,Sev_1,334,13.92
+K-Nearest Neighbors,Sev_3,Sev_2,477,19.88
+K-Nearest Neighbors,Sev_3,Sev_3,1110,46.25
+K-Nearest Neighbors,Sev_3,Sev_4,479,19.96
+K-Nearest Neighbors,Sev_4,Sev_1,358,14.92
+K-Nearest Neighbors,Sev_4,Sev_2,532,22.17
+K-Nearest Neighbors,Sev_4,Sev_3,564,23.5
+K-Nearest Neighbors,Sev_4,Sev_4,946,39.42
+Gradient Boosting v2,Sev_1,Sev_1,2225,92.71
+Gradient Boosting v2,Sev_1,Sev_2,40,1.67
+Gradient Boosting v2,Sev_1,Sev_3,73,3.04
+Gradient Boosting v2,Sev_1,Sev_4,62,2.58
+Gradient Boosting v2,Sev_2,Sev_1,119,4.96
+Gradient Boosting v2,Sev_2,Sev_2,1191,49.62
+Gradient Boosting v2,Sev_2,Sev_3,493,20.54
+Gradient Boosting v2,Sev_2,Sev_4,597,24.88
+Gradient Boosting v2,Sev_3,Sev_1,253,10.54
+Gradient Boosting v2,Sev_3,Sev_2,162,6.75
+Gradient Boosting v2,Sev_3,Sev_3,1649,68.71
+Gradient Boosting v2,Sev_3,Sev_4,336,14.0
+Gradient Boosting v2,Sev_4,Sev_1,88,3.67
+Gradient Boosting v2,Sev_4,Sev_2,474,19.75
+Gradient Boosting v2,Sev_4,Sev_3,84,3.5
+Gradient Boosting v2,Sev_4,Sev_4,1754,73.08
+LightGBM,Sev_1,Sev_1,2226,92.75
+LightGBM,Sev_1,Sev_2,43,1.79
+LightGBM,Sev_1,Sev_3,74,3.08
+LightGBM,Sev_1,Sev_4,57,2.38
+LightGBM,Sev_2,Sev_1,119,4.96
+LightGBM,Sev_2,Sev_2,1194,49.75
+LightGBM,Sev_2,Sev_3,474,19.75
+LightGBM,Sev_2,Sev_4,613,25.54
+LightGBM,Sev_3,Sev_1,246,10.25
+LightGBM,Sev_3,Sev_2,180,7.5
+LightGBM,Sev_3,Sev_3,1639,68.29
+LightGBM,Sev_3,Sev_4,335,13.96
+LightGBM,Sev_4,Sev_1,91,3.79
+LightGBM,Sev_4,Sev_2,441,18.38
+LightGBM,Sev_4,Sev_3,90,3.75
+LightGBM,Sev_4,Sev_4,1778,74.08
