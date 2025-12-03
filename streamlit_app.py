@@ -16,7 +16,7 @@ from datetime import datetime, time as dt_time
 # PAGE CONFIG
 # =============================================================================
 st.set_page_config(
-    page_title="🚗 Accident Severity Predictor",
+    page_title="Accident Severity Predictor",
     page_icon="🚗",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -65,7 +65,7 @@ st.markdown("""
 # =============================================================================
 # TITLE
 # =============================================================================
-st.markdown('<h2 class="main-header">🚗 National Highway Traffic Safety Administration (NHTSA)</p>', unsafe_allow_html=True)
+st.markdown('<h2 class="main-header">National Highway Traffic Safety Administration (NHTSA)</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-header">Predict accident severity using Machine Learning models</p>', unsafe_allow_html=True)
 
 # =============================================================================
@@ -254,10 +254,10 @@ print("\\n🎉 All models saved! Run: streamlit run streamlit_app.py")
 # =============================================================================
 # SIDEBAR - CLASSIFICATION TYPE & MODEL SELECTION
 # =============================================================================
-st.sidebar.markdown("## ⚙️ Configuration")
+st.sidebar.markdown("## Configuration")
 
 # Classification Type Selection
-st.sidebar.markdown("### 📊 Classification Type")
+st.sidebar.markdown("### Classification Type")
 classification_type = st.sidebar.radio(
     "Select prediction type:",
     ["🎯 Multi-Class (4 Levels)", "⚖️ Binary (LOW/HIGH)"],
@@ -269,7 +269,7 @@ is_multiclass = "Multi-Class" in classification_type
 st.sidebar.markdown("---")
 
 # Model Selection based on classification type
-st.sidebar.markdown("### 🤖 Model Selection")
+st.sidebar.markdown("### Model Selection")
 
 if is_multiclass:
     if multiclass_models:
@@ -300,7 +300,7 @@ else:
 
 # Display model info
 st.sidebar.markdown("---")
-st.sidebar.markdown("### ℹ️ Classification Info")
+st.sidebar.markdown("### Classification Info")
 
 if is_multiclass:
     st.sidebar.info("""
@@ -330,7 +330,7 @@ st.sidebar.markdown(f"**Models Loaded:** {len(current_models)}")
 # MAIN CONTENT - INPUT FORM
 # =============================================================================
 st.markdown("---")
-st.markdown("## 📝 Enter Accident Details")
+st.markdown("## Enter Accident Details")
 
 # Create three columns for inputs
 col1, col2, col3 = st.columns(3)
@@ -415,14 +415,14 @@ with col3:
     
     # Date and Time inputs
     accident_date = st.date_input(
-        "Accident Date", 
-        datetime.now(),
-        help="Date of the accident"
+    "Accident Date", 
+    datetime(2022, 12, 15),  
+    help="Date of the accident"
     )
     
     accident_time = st.time_input(
         "Accident Time", 
-        dt_time(12, 0),
+        dt_time(7, 0),
         help="Time of the accident"
     )
     
