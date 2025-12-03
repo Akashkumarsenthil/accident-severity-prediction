@@ -1,0 +1,21 @@
+Model,Class,Precision,Recall,F1_Score,Support
+Logistic Regression,Sev_1,0.5713,0.738,0.644,12473
+Logistic Regression,Sev_2,0.4227,0.3152,0.3611,12472
+Logistic Regression,Sev_3,0.4735,0.5505,0.5091,12473
+Logistic Regression,Sev_4,0.4802,0.3841,0.4268,12473
+Decision Tree,Sev_1,0.8288,0.9129,0.8688,12473
+Decision Tree,Sev_2,0.5493,0.4777,0.511,12472
+Decision Tree,Sev_3,0.6577,0.6591,0.6584,12473
+Decision Tree,Sev_4,0.6198,0.6364,0.628,12473
+Random Forest,Sev_1,0.8346,0.9282,0.879,12473
+Random Forest,Sev_2,0.6675,0.4883,0.564,12472
+Random Forest,Sev_3,0.7243,0.6876,0.7055,12473
+Random Forest,Sev_4,0.6392,0.7715,0.6991,12473
+Gradient Boosting,Sev_1,0.8446,0.9346,0.8873,12473
+Gradient Boosting,Sev_2,0.6478,0.5218,0.578,12472
+Gradient Boosting,Sev_3,0.7238,0.696,0.7096,12473
+Gradient Boosting,Sev_4,0.6563,0.7393,0.6953,12473
+K-Nearest Neighbors,Sev_1,0.6562,0.8809,0.7521,12473
+K-Nearest Neighbors,Sev_2,0.4421,0.4463,0.4442,12472
+K-Nearest Neighbors,Sev_3,0.4896,0.4714,0.4804,12473
+K-Nearest Neighbors,Sev_4,0.5237,0.3589,0.4259,12473

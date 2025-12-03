@@ -1,113 +1,81 @@
 Model,Actual,Predicted,Count,Percentage
-Logistic Regression,Sev_1,Sev_1,1813,75.54
-Logistic Regression,Sev_1,Sev_2,144,6.0
-Logistic Regression,Sev_1,Sev_3,347,14.46
-Logistic Regression,Sev_1,Sev_4,96,4.0
-Logistic Regression,Sev_2,Sev_1,590,24.58
-Logistic Regression,Sev_2,Sev_2,796,33.17
-Logistic Regression,Sev_2,Sev_3,513,21.38
-Logistic Regression,Sev_2,Sev_4,501,20.88
-Logistic Regression,Sev_3,Sev_1,401,16.71
-Logistic Regression,Sev_3,Sev_2,323,13.46
-Logistic Regression,Sev_3,Sev_3,1347,56.12
-Logistic Regression,Sev_3,Sev_4,329,13.71
-Logistic Regression,Sev_4,Sev_1,348,14.5
-Logistic Regression,Sev_4,Sev_2,524,21.83
-Logistic Regression,Sev_4,Sev_3,629,26.21
-Logistic Regression,Sev_4,Sev_4,899,37.46
-Decision Tree,Sev_1,Sev_1,2105,87.71
-Decision Tree,Sev_1,Sev_2,89,3.71
-Decision Tree,Sev_1,Sev_3,137,5.71
-Decision Tree,Sev_1,Sev_4,69,2.88
-Decision Tree,Sev_2,Sev_1,116,4.83
-Decision Tree,Sev_2,Sev_2,1136,47.33
-Decision Tree,Sev_2,Sev_3,458,19.08
-Decision Tree,Sev_2,Sev_4,690,28.75
-Decision Tree,Sev_3,Sev_1,227,9.46
-Decision Tree,Sev_3,Sev_2,470,19.58
-Decision Tree,Sev_3,Sev_3,1442,60.08
-Decision Tree,Sev_3,Sev_4,261,10.88
-Decision Tree,Sev_4,Sev_1,127,5.29
-Decision Tree,Sev_4,Sev_2,619,25.79
-Decision Tree,Sev_4,Sev_3,267,11.12
-Decision Tree,Sev_4,Sev_4,1387,57.79
-Random Forest,Sev_1,Sev_1,2199,91.62
-Random Forest,Sev_1,Sev_2,35,1.46
-Random Forest,Sev_1,Sev_3,88,3.67
-Random Forest,Sev_1,Sev_4,78,3.25
-Random Forest,Sev_2,Sev_1,131,5.46
-Random Forest,Sev_2,Sev_2,1090,45.42
-Random Forest,Sev_2,Sev_3,497,20.71
-Random Forest,Sev_2,Sev_4,682,28.42
-Random Forest,Sev_3,Sev_1,249,10.38
-Random Forest,Sev_3,Sev_2,134,5.58
-Random Forest,Sev_3,Sev_3,1653,68.88
-Random Forest,Sev_3,Sev_4,364,15.17
-Random Forest,Sev_4,Sev_1,73,3.04
-Random Forest,Sev_4,Sev_2,383,15.96
-Random Forest,Sev_4,Sev_3,78,3.25
-Random Forest,Sev_4,Sev_4,1866,77.75
-Gradient Boosting,Sev_1,Sev_1,2204,91.83
-Gradient Boosting,Sev_1,Sev_2,42,1.75
-Gradient Boosting,Sev_1,Sev_3,93,3.88
-Gradient Boosting,Sev_1,Sev_4,61,2.54
-Gradient Boosting,Sev_2,Sev_1,109,4.54
-Gradient Boosting,Sev_2,Sev_2,1215,50.62
-Gradient Boosting,Sev_2,Sev_3,478,19.92
-Gradient Boosting,Sev_2,Sev_4,598,24.92
-Gradient Boosting,Sev_3,Sev_1,231,9.62
-Gradient Boosting,Sev_3,Sev_2,199,8.29
-Gradient Boosting,Sev_3,Sev_3,1646,68.58
-Gradient Boosting,Sev_3,Sev_4,324,13.5
-Gradient Boosting,Sev_4,Sev_1,83,3.46
-Gradient Boosting,Sev_4,Sev_2,467,19.46
-Gradient Boosting,Sev_4,Sev_3,130,5.42
-Gradient Boosting,Sev_4,Sev_4,1720,71.67
-K-Nearest Neighbors,Sev_1,Sev_1,1983,82.62
-K-Nearest Neighbors,Sev_1,Sev_2,127,5.29
-K-Nearest Neighbors,Sev_1,Sev_3,175,7.29
-K-Nearest Neighbors,Sev_1,Sev_4,115,4.79
-K-Nearest Neighbors,Sev_2,Sev_1,430,17.92
-K-Nearest Neighbors,Sev_2,Sev_2,846,35.25
-K-Nearest Neighbors,Sev_2,Sev_3,592,24.67
-K-Nearest Neighbors,Sev_2,Sev_4,532,22.17
-K-Nearest Neighbors,Sev_3,Sev_1,334,13.92
-K-Nearest Neighbors,Sev_3,Sev_2,477,19.88
-K-Nearest Neighbors,Sev_3,Sev_3,1110,46.25
-K-Nearest Neighbors,Sev_3,Sev_4,479,19.96
-K-Nearest Neighbors,Sev_4,Sev_1,358,14.92
-K-Nearest Neighbors,Sev_4,Sev_2,532,22.17
-K-Nearest Neighbors,Sev_4,Sev_3,564,23.5
-K-Nearest Neighbors,Sev_4,Sev_4,946,39.42
-Gradient Boosting v2,Sev_1,Sev_1,2225,92.71
-Gradient Boosting v2,Sev_1,Sev_2,40,1.67
-Gradient Boosting v2,Sev_1,Sev_3,73,3.04
-Gradient Boosting v2,Sev_1,Sev_4,62,2.58
-Gradient Boosting v2,Sev_2,Sev_1,119,4.96
-Gradient Boosting v2,Sev_2,Sev_2,1191,49.62
-Gradient Boosting v2,Sev_2,Sev_3,493,20.54
-Gradient Boosting v2,Sev_2,Sev_4,597,24.88
-Gradient Boosting v2,Sev_3,Sev_1,253,10.54
-Gradient Boosting v2,Sev_3,Sev_2,162,6.75
-Gradient Boosting v2,Sev_3,Sev_3,1649,68.71
-Gradient Boosting v2,Sev_3,Sev_4,336,14.0
-Gradient Boosting v2,Sev_4,Sev_1,88,3.67
-Gradient Boosting v2,Sev_4,Sev_2,474,19.75
-Gradient Boosting v2,Sev_4,Sev_3,84,3.5
-Gradient Boosting v2,Sev_4,Sev_4,1754,73.08
-LightGBM,Sev_1,Sev_1,2226,92.75
-LightGBM,Sev_1,Sev_2,43,1.79
-LightGBM,Sev_1,Sev_3,74,3.08
-LightGBM,Sev_1,Sev_4,57,2.38
-LightGBM,Sev_2,Sev_1,119,4.96
-LightGBM,Sev_2,Sev_2,1194,49.75
-LightGBM,Sev_2,Sev_3,474,19.75
-LightGBM,Sev_2,Sev_4,613,25.54
-LightGBM,Sev_3,Sev_1,246,10.25
-LightGBM,Sev_3,Sev_2,180,7.5
-LightGBM,Sev_3,Sev_3,1639,68.29
-LightGBM,Sev_3,Sev_4,335,13.96
-LightGBM,Sev_4,Sev_1,91,3.79
-LightGBM,Sev_4,Sev_2,441,18.38
-LightGBM,Sev_4,Sev_3,90,3.75
-LightGBM,Sev_4,Sev_4,1778,74.08
+Logistic Regression,Sev_1,Sev_1,9205,73.8
+Logistic Regression,Sev_1,Sev_2,738,5.92
+Logistic Regression,Sev_1,Sev_3,1899,15.22
+Logistic Regression,Sev_1,Sev_4,631,5.06
+Logistic Regression,Sev_2,Sev_1,2977,23.87
+Logistic Regression,Sev_2,Sev_2,3931,31.52
+Logistic Regression,Sev_2,Sev_3,2730,21.89
+Logistic Regression,Sev_2,Sev_4,2834,22.72
+Logistic Regression,Sev_3,Sev_1,2075,16.64
+Logistic Regression,Sev_3,Sev_2,1809,14.5
+Logistic Regression,Sev_3,Sev_3,6867,55.05
+Logistic Regression,Sev_3,Sev_4,1722,13.81
+Logistic Regression,Sev_4,Sev_1,1855,14.87
+Logistic Regression,Sev_4,Sev_2,2821,22.62
+Logistic Regression,Sev_4,Sev_3,3006,24.1
+Logistic Regression,Sev_4,Sev_4,4791,38.41
+Decision Tree,Sev_1,Sev_1,11386,91.29
+Decision Tree,Sev_1,Sev_2,257,2.06
+Decision Tree,Sev_1,Sev_3,535,4.29
+Decision Tree,Sev_1,Sev_4,295,2.37
+Decision Tree,Sev_2,Sev_1,637,5.11
+Decision Tree,Sev_2,Sev_2,5958,47.77
+Decision Tree,Sev_2,Sev_3,2650,21.25
+Decision Tree,Sev_2,Sev_4,3227,25.87
+Decision Tree,Sev_3,Sev_1,1236,9.91
+Decision Tree,Sev_3,Sev_2,1669,13.38
+Decision Tree,Sev_3,Sev_3,8221,65.91
+Decision Tree,Sev_3,Sev_4,1347,10.8
+Decision Tree,Sev_4,Sev_1,479,3.84
+Decision Tree,Sev_4,Sev_2,2962,23.75
+Decision Tree,Sev_4,Sev_3,1094,8.77
+Decision Tree,Sev_4,Sev_4,7938,63.64
+Random Forest,Sev_1,Sev_1,11578,92.82
+Random Forest,Sev_1,Sev_2,148,1.19
+Random Forest,Sev_1,Sev_3,339,2.72
+Random Forest,Sev_1,Sev_4,408,3.27
+Random Forest,Sev_2,Sev_1,627,5.03
+Random Forest,Sev_2,Sev_2,6090,48.83
+Random Forest,Sev_2,Sev_3,2600,20.85
+Random Forest,Sev_2,Sev_4,3155,25.3
+Random Forest,Sev_3,Sev_1,1300,10.42
+Random Forest,Sev_3,Sev_2,727,5.83
+Random Forest,Sev_3,Sev_3,8577,68.76
+Random Forest,Sev_3,Sev_4,1869,14.98
+Random Forest,Sev_4,Sev_1,367,2.94
+Random Forest,Sev_4,Sev_2,2158,17.3
+Random Forest,Sev_4,Sev_3,325,2.61
+Random Forest,Sev_4,Sev_4,9623,77.15
+Gradient Boosting,Sev_1,Sev_1,11657,93.46
+Gradient Boosting,Sev_1,Sev_2,146,1.17
+Gradient Boosting,Sev_1,Sev_3,363,2.91
+Gradient Boosting,Sev_1,Sev_4,307,2.46
+Gradient Boosting,Sev_2,Sev_1,559,4.48
+Gradient Boosting,Sev_2,Sev_2,6508,52.18
+Gradient Boosting,Sev_2,Sev_3,2514,20.16
+Gradient Boosting,Sev_2,Sev_4,2891,23.18
+Gradient Boosting,Sev_3,Sev_1,1201,9.63
+Gradient Boosting,Sev_3,Sev_2,961,7.7
+Gradient Boosting,Sev_3,Sev_3,8681,69.6
+Gradient Boosting,Sev_3,Sev_4,1630,13.07
+Gradient Boosting,Sev_4,Sev_1,384,3.08
+Gradient Boosting,Sev_4,Sev_2,2432,19.5
+Gradient Boosting,Sev_4,Sev_3,436,3.5
+Gradient Boosting,Sev_4,Sev_4,9221,73.93
+K-Nearest Neighbors,Sev_1,Sev_1,10987,88.09
+K-Nearest Neighbors,Sev_1,Sev_2,538,4.31
+K-Nearest Neighbors,Sev_1,Sev_3,538,4.31
+K-Nearest Neighbors,Sev_1,Sev_4,410,3.29
+K-Nearest Neighbors,Sev_2,Sev_1,2080,16.68
+K-Nearest Neighbors,Sev_2,Sev_2,5566,44.63
+K-Nearest Neighbors,Sev_2,Sev_3,2776,22.26
+K-Nearest Neighbors,Sev_2,Sev_4,2050,16.44
+K-Nearest Neighbors,Sev_3,Sev_1,1839,14.74
+K-Nearest Neighbors,Sev_3,Sev_2,3143,25.2
+K-Nearest Neighbors,Sev_3,Sev_3,5880,47.14
+K-Nearest Neighbors,Sev_3,Sev_4,1611,12.92
+K-Nearest Neighbors,Sev_4,Sev_1,1838,14.74
+K-Nearest Neighbors,Sev_4,Sev_2,3344,26.81
+K-Nearest Neighbors,Sev_4,Sev_3,2815,22.57
+K-Nearest Neighbors,Sev_4,Sev_4,4476,35.89

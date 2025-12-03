@@ -1,17 +1,17 @@
 Source,Class,Count,Percentage
-Actual,LOW,4800,50.0
-Actual,HIGH,4800,50.0
-Logistic Regression,LOW,4657,48.51
-Logistic Regression,HIGH,4943,51.49
-Decision Tree,LOW,5032,52.42
-Decision Tree,HIGH,4568,47.58
-Random Forest,LOW,4160,43.33
-Random Forest,HIGH,5440,56.67
-Gradient Boosting,LOW,4498,46.85
-Gradient Boosting,HIGH,5102,53.15
-K-Nearest Neighbors,LOW,4822,50.23
-K-Nearest Neighbors,HIGH,4778,49.77
-Naive Bayes,LOW,3930,40.94
-Naive Bayes,HIGH,5670,59.06
-AdaBoost,LOW,4968,51.75
-AdaBoost,HIGH,4632,48.25
+Actual,LOW,24946,50.0
+Actual,HIGH,24945,50.0
+Logistic Regression,LOW,23920,47.94
+Logistic Regression,HIGH,25971,52.06
+Decision Tree,LOW,24872,49.85
+Decision Tree,HIGH,25019,50.15
+Random Forest,LOW,22302,44.7
+Random Forest,HIGH,27589,55.3
+Gradient Boosting,LOW,23312,46.73
+Gradient Boosting,HIGH,26579,53.27
+K-Nearest Neighbors,LOW,24703,49.51
+K-Nearest Neighbors,HIGH,25188,50.49
+Original_Sev_1,LOW,62363,25.0
+Original_Sev_2,LOW,62363,25.0
+Original_Sev_3,HIGH,62363,25.0
+Original_Sev_4,HIGH,62363,25.0

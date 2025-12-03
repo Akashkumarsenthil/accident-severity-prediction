@@ -1,33 +1,25 @@
 Source,Class,Count,Percentage
-Actual,Sev_1,2400,25.0
-Actual,Sev_2,2400,25.0
-Actual,Sev_3,2400,25.0
-Actual,Sev_4,2400,25.0
-Logistic Regression,Sev_1,3152,32.83
-Logistic Regression,Sev_2,1787,18.61
-Logistic Regression,Sev_3,2836,29.54
-Logistic Regression,Sev_4,1825,19.01
-Decision Tree,Sev_1,2575,26.82
-Decision Tree,Sev_2,2314,24.1
-Decision Tree,Sev_3,2304,24.0
-Decision Tree,Sev_4,2407,25.07
-Random Forest,Sev_1,2652,27.62
-Random Forest,Sev_2,1642,17.1
-Random Forest,Sev_3,2316,24.12
-Random Forest,Sev_4,2990,31.15
-Gradient Boosting,Sev_1,2627,27.36
-Gradient Boosting,Sev_2,1923,20.03
-Gradient Boosting,Sev_3,2347,24.45
-Gradient Boosting,Sev_4,2703,28.16
-K-Nearest Neighbors,Sev_1,3105,32.34
-K-Nearest Neighbors,Sev_2,1982,20.65
-K-Nearest Neighbors,Sev_3,2441,25.43
-K-Nearest Neighbors,Sev_4,2072,21.58
-Gradient Boosting v2,Sev_1,2685,27.97
-Gradient Boosting v2,Sev_2,1867,19.45
-Gradient Boosting v2,Sev_3,2299,23.95
-Gradient Boosting v2,Sev_4,2749,28.64
-LightGBM,Sev_1,2682,27.94
-LightGBM,Sev_2,1858,19.35
-LightGBM,Sev_3,2277,23.72
-LightGBM,Sev_4,2783,28.99
+Actual,Sev_1,12473,25.0
+Actual,Sev_2,12472,25.0
+Actual,Sev_3,12473,25.0
+Actual,Sev_4,12473,25.0
+Logistic Regression,Sev_1,16112,32.29
+Logistic Regression,Sev_2,9299,18.64
+Logistic Regression,Sev_3,14502,29.07
+Logistic Regression,Sev_4,9978,20.0
+Decision Tree,Sev_1,13738,27.54
+Decision Tree,Sev_2,10846,21.74
+Decision Tree,Sev_3,12500,25.05
+Decision Tree,Sev_4,12807,25.67
+Random Forest,Sev_1,13872,27.8
+Random Forest,Sev_2,9123,18.29
+Random Forest,Sev_3,11841,23.73
+Random Forest,Sev_4,15055,30.18
+Gradient Boosting,Sev_1,13801,27.66
+Gradient Boosting,Sev_2,10047,20.14
+Gradient Boosting,Sev_3,11994,24.04
+Gradient Boosting,Sev_4,14049,28.16
+K-Nearest Neighbors,Sev_1,16744,33.56
+K-Nearest Neighbors,Sev_2,12591,25.24
+K-Nearest Neighbors,Sev_3,12009,24.07
+K-Nearest Neighbors,Sev_4,8547,17.13

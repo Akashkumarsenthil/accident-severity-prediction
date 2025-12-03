@@ -1,36 +1,26 @@
 Model,Metric,Value
-Logistic Regression,Accuracy,0.6757
-Logistic Regression,Precision,0.6706
-Logistic Regression,Recall,0.6906
-Logistic Regression,F1-Score,0.6805
-Logistic Regression,AUC-ROC,0.7555
-Decision Tree,Accuracy,0.6908
-Decision Tree,Precision,0.7005
-Decision Tree,Recall,0.6667
-Decision Tree,F1-Score,0.6832
-Decision Tree,AUC-ROC,0.7387
-Random Forest,Accuracy,0.7633
-Random Forest,Precision,0.7324
-Random Forest,Recall,0.83
-Random Forest,F1-Score,0.7781
-Random Forest,AUC-ROC,0.8492
-Gradient Boosting,Accuracy,0.7619
-Gradient Boosting,Precision,0.7464
-Gradient Boosting,Recall,0.7933
-Gradient Boosting,F1-Score,0.7691
-Gradient Boosting,AUC-ROC,0.8495
-K-Nearest Neighbors,Accuracy,0.681
-K-Nearest Neighbors,Precision,0.6819
-K-Nearest Neighbors,Recall,0.6787
-K-Nearest Neighbors,F1-Score,0.6803
-K-Nearest Neighbors,AUC-ROC,0.7487
-Naive Bayes,Accuracy,0.6708
-Naive Bayes,Precision,0.6446
-Naive Bayes,Recall,0.7615
-Naive Bayes,F1-Score,0.6982
-Naive Bayes,AUC-ROC,0.7159
-AdaBoost,Accuracy,0.6808
-AdaBoost,Precision,0.6874
-AdaBoost,Recall,0.6633
-AdaBoost,F1-Score,0.6751
-AdaBoost,AUC-ROC,0.7711
+Logistic Regression,Accuracy,0.6771
+Logistic Regression,Precision,0.6701
+Logistic Regression,Recall,0.6976
+Logistic Regression,F1-Score,0.6836
+Logistic Regression,AUC-ROC,0.7503
+Decision Tree,Accuracy,0.7377
+Decision Tree,Precision,0.737
+Decision Tree,Recall,0.7392
+Decision Tree,F1-Score,0.7381
+Decision Tree,AUC-ROC,0.7756
+Random Forest,Accuracy,0.7747
+Random Forest,Precision,0.7484
+Random Forest,Recall,0.8277
+Random Forest,F1-Score,0.786
+Random Forest,AUC-ROC,0.8617
+Gradient Boosting,Accuracy,0.7756
+Gradient Boosting,Precision,0.7587
+Gradient Boosting,Recall,0.8084
+Gradient Boosting,F1-Score,0.7827
+Gradient Boosting,AUC-ROC,0.8624
+K-Nearest Neighbors,Accuracy,0.7011
+K-Nearest Neighbors,Precision,0.6992
+K-Nearest Neighbors,Recall,0.706
+K-Nearest Neighbors,F1-Score,0.7026
+K-Nearest Neighbors,AUC-ROC,0.7638

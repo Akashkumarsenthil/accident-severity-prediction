@@ -1,91 +1,61 @@
 Model,Feature,Importance,Rank
-Decision Tree,Distance(mi),0.2777,1
-Decision Tree,year,0.1918,2
-Decision Tree,month,0.1088,3
-Decision Tree,Pressure(in),0.0707,4
-Decision Tree,Temperature(F),0.0523,5
-Decision Tree,Humidity(%),0.0488,6
-Decision Tree,Traffic_Signal,0.0475,7
-Decision Tree,day,0.0443,8
-Decision Tree,hour,0.0425,9
-Decision Tree,Wind_Speed(mph),0.031,10
-Decision Tree,dow,0.0254,11
-Decision Tree,Visibility(mi),0.0119,12
-Decision Tree,Precipitation(in),0.0069,13
-Decision Tree,Crossing,0.0063,14
-Decision Tree,Stop,0.0063,15
-Random Forest,Distance(mi),0.2604,1
-Random Forest,year,0.1394,2
-Random Forest,month,0.0905,3
-Random Forest,Temperature(F),0.0733,4
-Random Forest,Pressure(in),0.0678,5
-Random Forest,Humidity(%),0.0547,6
-Random Forest,day,0.0474,7
-Random Forest,hour,0.0468,8
-Random Forest,Wind_Speed(mph),0.0396,9
-Random Forest,Traffic_Signal,0.0339,10
-Random Forest,dow,0.0304,11
-Random Forest,Crossing,0.019,12
-Random Forest,Visibility(mi),0.0186,13
-Random Forest,Precipitation(in),0.0113,14
-Random Forest,is_morning_peak,0.0097,15
-Gradient Boosting,Distance(mi),0.3155,1
-Gradient Boosting,year,0.2139,2
-Gradient Boosting,month,0.1134,3
-Gradient Boosting,Pressure(in),0.0606,4
-Gradient Boosting,Traffic_Signal,0.0507,5
-Gradient Boosting,Temperature(F),0.0434,6
-Gradient Boosting,Humidity(%),0.0365,7
-Gradient Boosting,hour,0.0323,8
-Gradient Boosting,day,0.0311,9
-Gradient Boosting,Wind_Speed(mph),0.0226,10
-Gradient Boosting,dow,0.0177,11
-Gradient Boosting,Crossing,0.0105,12
-Gradient Boosting,Visibility(mi),0.0094,13
-Gradient Boosting,Precipitation(in),0.0072,14
-Gradient Boosting,is_weekend,0.0064,15
-Gradient Boosting v2,Distance(mi),0.3847,1
-Gradient Boosting v2,year,0.2694,2
-Gradient Boosting v2,month,0.1295,3
-Gradient Boosting v2,Traffic_Signal,0.051,4
-Gradient Boosting v2,Pressure(in),0.0325,5
-Gradient Boosting v2,Temperature(F),0.0216,6
-Gradient Boosting v2,hour,0.0193,7
-Gradient Boosting v2,Humidity(%),0.015,8
-Gradient Boosting v2,dow,0.0138,9
-Gradient Boosting v2,Crossing,0.0134,10
-Gradient Boosting v2,day,0.0119,11
-Gradient Boosting v2,Wind_Speed(mph),0.0082,12
-Gradient Boosting v2,Stop,0.0052,13
-Gradient Boosting v2,Visibility(mi),0.0043,14
-Gradient Boosting v2,Precipitation(in),0.004,15
-LightGBM,Pressure(in),3624.0,1
-LightGBM,Temperature(F),2706.0,2
-LightGBM,Humidity(%),2475.0,3
-LightGBM,Distance(mi),2472.0,4
-LightGBM,day,2012.0,5
-LightGBM,hour,1787.0,6
-LightGBM,month,1720.0,7
-LightGBM,Wind_Speed(mph),1645.0,8
-LightGBM,year,1611.0,9
-LightGBM,dow,1173.0,10
-LightGBM,Visibility(mi),631.0,11
-LightGBM,Precipitation(in),358.0,12
-LightGBM,Traffic_Signal,294.0,13
-LightGBM,Crossing,249.0,14
-LightGBM,Junction,181.0,15
-Average,Pressure(in),724.8463,1
-Average,Temperature(F),541.2381,2
-Average,Humidity(%),495.031,3
-Average,Distance(mi),494.6477,4
-Average,day,402.4269,5
-Average,hour,357.4282,6
-Average,month,344.0884,7
-Average,Wind_Speed(mph),329.0203,8
-Average,year,322.3629,9
-Average,dow,234.6174,10
-Average,Visibility(mi),126.2088,11
-Average,Precipitation(in),71.6059,12
-Average,Traffic_Signal,58.8366,13
-Average,Crossing,49.8099,14
-Average,Junction,36.2038,15
+Decision Tree,Distance(mi),0.2907,1
+Decision Tree,year,0.1967,2
+Decision Tree,month,0.1109,3
+Decision Tree,Pressure(in),0.0676,4
+Decision Tree,Temperature(F),0.0506,5
+Decision Tree,Traffic_Signal,0.0489,6
+Decision Tree,Humidity(%),0.0456,7
+Decision Tree,day,0.0426,8
+Decision Tree,hour,0.0356,9
+Decision Tree,Wind_Speed(mph),0.0264,10
+Decision Tree,dow,0.0264,11
+Decision Tree,Visibility(mi),0.0111,12
+Decision Tree,Crossing,0.0069,13
+Decision Tree,Precipitation(in),0.0065,14
+Decision Tree,Stop,0.0055,15
+Random Forest,Distance(mi),0.3006,1
+Random Forest,year,0.1606,2
+Random Forest,month,0.0984,3
+Random Forest,Temperature(F),0.0628,4
+Random Forest,Pressure(in),0.0579,5
+Random Forest,Humidity(%),0.0433,6
+Random Forest,hour,0.0397,7
+Random Forest,Traffic_Signal,0.0388,8
+Random Forest,day,0.0361,9
+Random Forest,Wind_Speed(mph),0.0294,10
+Random Forest,dow,0.0246,11
+Random Forest,Crossing,0.0212,12
+Random Forest,Visibility(mi),0.0155,13
+Random Forest,is_morning_peak,0.01,14
+Random Forest,Precipitation(in),0.0099,15
+Gradient Boosting,Distance(mi),0.3333,1
+Gradient Boosting,year,0.2289,2
+Gradient Boosting,month,0.1214,3
+Gradient Boosting,Pressure(in),0.0561,4
+Gradient Boosting,Traffic_Signal,0.0555,5
+Gradient Boosting,Temperature(F),0.0356,6
+Gradient Boosting,Humidity(%),0.0296,7
+Gradient Boosting,hour,0.0279,8
+Gradient Boosting,day,0.0249,9
+Gradient Boosting,Wind_Speed(mph),0.0165,10
+Gradient Boosting,dow,0.0134,11
+Gradient Boosting,Crossing,0.0101,12
+Gradient Boosting,is_weekend,0.0085,13
+Gradient Boosting,Visibility(mi),0.0078,14
+Gradient Boosting,Stop,0.0058,15
+Average,Distance(mi),0.3082,1
+Average,year,0.1954,2
+Average,month,0.1102,3
+Average,Pressure(in),0.0605,4
+Average,Temperature(F),0.0497,5
+Average,Traffic_Signal,0.0477,6
+Average,Humidity(%),0.0395,7
+Average,day,0.0345,8
+Average,hour,0.0344,9
+Average,Wind_Speed(mph),0.0241,10
+Average,dow,0.0215,11
+Average,Crossing,0.0127,12
+Average,Visibility(mi),0.0115,13
+Average,Precipitation(in),0.0073,14
+Average,is_weekend,0.0067,15

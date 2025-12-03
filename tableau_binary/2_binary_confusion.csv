@@ -1,29 +1,21 @@
-Model,Actual,Predicted,Count,Percentage,Cell_Type
-Logistic Regression,LOW,LOW,3172,66.08,TN
-Logistic Regression,LOW,HIGH,1628,33.92,FP
-Logistic Regression,HIGH,LOW,1485,30.94,FN
-Logistic Regression,HIGH,HIGH,3315,69.06,TP
-Decision Tree,LOW,LOW,3432,71.5,TN
-Decision Tree,LOW,HIGH,1368,28.5,FP
-Decision Tree,HIGH,LOW,1600,33.33,FN
-Decision Tree,HIGH,HIGH,3200,66.67,TP
-Random Forest,LOW,LOW,3344,69.67,TN
-Random Forest,LOW,HIGH,1456,30.33,FP
-Random Forest,HIGH,LOW,816,17.0,FN
-Random Forest,HIGH,HIGH,3984,83.0,TP
-Gradient Boosting,LOW,LOW,3506,73.04,TN
-Gradient Boosting,LOW,HIGH,1294,26.96,FP
-Gradient Boosting,HIGH,LOW,992,20.67,FN
-Gradient Boosting,HIGH,HIGH,3808,79.33,TP
-K-Nearest Neighbors,LOW,LOW,3280,68.33,TN
-K-Nearest Neighbors,LOW,HIGH,1520,31.67,FP
-K-Nearest Neighbors,HIGH,LOW,1542,32.12,FN
-K-Nearest Neighbors,HIGH,HIGH,3258,67.88,TP
-Naive Bayes,LOW,LOW,2785,58.02,TN
-Naive Bayes,LOW,HIGH,2015,41.98,FP
-Naive Bayes,HIGH,LOW,1145,23.85,FN
-Naive Bayes,HIGH,HIGH,3655,76.15,TP
-AdaBoost,LOW,LOW,3352,69.83,TN
-AdaBoost,LOW,HIGH,1448,30.17,FP
-AdaBoost,HIGH,LOW,1616,33.67,FN
-AdaBoost,HIGH,HIGH,3184,66.33,TP
+Model,Actual,Predicted,Count,Percentage
+Logistic Regression,LOW,LOW,16377,65.65
+Logistic Regression,LOW,HIGH,8569,34.35
+Logistic Regression,HIGH,LOW,7543,30.24
+Logistic Regression,HIGH,HIGH,17402,69.76
+Decision Tree,LOW,LOW,18366,73.62
+Decision Tree,LOW,HIGH,6580,26.38
+Decision Tree,HIGH,LOW,6506,26.08
+Decision Tree,HIGH,HIGH,18439,73.92
+Random Forest,LOW,LOW,18004,72.17
+Random Forest,LOW,HIGH,6942,27.83
+Random Forest,HIGH,LOW,4298,17.23
+Random Forest,HIGH,HIGH,20647,82.77
+Gradient Boosting,LOW,LOW,18532,74.29
+Gradient Boosting,LOW,HIGH,6414,25.71
+Gradient Boosting,HIGH,LOW,4780,19.16
+Gradient Boosting,HIGH,HIGH,20165,80.84
+K-Nearest Neighbors,LOW,LOW,17369,69.63
+K-Nearest Neighbors,LOW,HIGH,7577,30.37
+K-Nearest Neighbors,HIGH,LOW,7334,29.4
+K-Nearest Neighbors,HIGH,HIGH,17611,70.6

@@ -1,5 +1,5 @@
 # =============================================================================
-# US ACCIDENTS SEVERITY PREDICTION - STREAMLIT APP (FULL VERSION)
+# US ACCIDENTS SEVERITY PREDICTION - STREAMLIT APP (CORRECTED WITH EMOJIS)
 # =============================================================================
 # Supports both MULTI-CLASS (4 levels) and BINARY (LOW/HIGH) classification
 # Run with: streamlit run streamlit_app.py
@@ -65,11 +65,11 @@ st.markdown("""
 # =============================================================================
 # TITLE
 # =============================================================================
-st.markdown('<h2 class="main-header">National Highway Traffic Safety Administration (NHTSA)</p>', unsafe_allow_html=True)
+st.markdown('<h2 class="main-header">🚗 US Accident Severity Predictor</h2>', unsafe_allow_html=True)
 st.markdown('<p class="sub-header">Predict accident severity using Machine Learning models</p>', unsafe_allow_html=True)
 
 # =============================================================================
-# LOAD MODELS FUNCTION
+# LOAD MODELS FUNCTION - FIXED
 # =============================================================================
 @st.cache_resource
 def load_all_models():
@@ -81,44 +81,55 @@ def load_all_models():
     binary_scaler = None
     multiclass_features = None
     binary_features = None
+    label_encoder = None
+    
+    # Files to exclude from model loading
+    EXCLUDE_FILES = ['scaler.pkl', 'feature_names.pkl', 'label_encoder.pkl', 'metadata.pkl']
     
     # Check if models directory exists
     if not os.path.exists('models/'):
-        return None, None, None, None, None, None
+        return None, None, None, None, None, None, None
     
     try:
         # Load Multi-class models
         multiclass_dir = 'models/multiclass/'
         if os.path.exists(multiclass_dir):
             for file in os.listdir(multiclass_dir):
-                if file.endswith('.pkl') and file not in ['scaler.pkl', 'feature_names.pkl']:
+                if file.endswith('.pkl') and file not in EXCLUDE_FILES:
                     model_name = file.replace('.pkl', '').replace('_', ' ').title()
                     with open(f'{multiclass_dir}/{file}', 'rb') as f:
                         multiclass_models[model_name] = pickle.load(f)
             
-            # Load multiclass scaler and features
+            # Load multiclass scaler
             if os.path.exists(f'{multiclass_dir}/scaler.pkl'):
                 with open(f'{multiclass_dir}/scaler.pkl', 'rb') as f:
                     multiclass_scaler = pickle.load(f)
             
+            # Load multiclass features
             if os.path.exists(f'{multiclass_dir}/feature_names.pkl'):
                 with open(f'{multiclass_dir}/feature_names.pkl', 'rb') as f:
                     multiclass_features = pickle.load(f)
+            
+            # Load label encoder (IMPORTANT for multiclass)
+            if os.path.exists(f'{multiclass_dir}/label_encoder.pkl'):
+                with open(f'{multiclass_dir}/label_encoder.pkl', 'rb') as f:
+                    label_encoder = pickle.load(f)
         
         # Load Binary models
         binary_dir = 'models/binary/'
         if os.path.exists(binary_dir):
             for file in os.listdir(binary_dir):
-                if file.endswith('.pkl') and file not in ['scaler.pkl', 'feature_names.pkl']:
+                if file.endswith('.pkl') and file not in EXCLUDE_FILES:
                     model_name = file.replace('.pkl', '').replace('_', ' ').title()
                     with open(f'{binary_dir}/{file}', 'rb') as f:
                         binary_models[model_name] = pickle.load(f)
             
-            # Load binary scaler and features
+            # Load binary scaler
             if os.path.exists(f'{binary_dir}/scaler.pkl'):
                 with open(f'{binary_dir}/scaler.pkl', 'rb') as f:
                     binary_scaler = pickle.load(f)
             
+            # Load binary features
             if os.path.exists(f'{binary_dir}/feature_names.pkl'):
                 with open(f'{binary_dir}/feature_names.pkl', 'rb') as f:
                     binary_features = pickle.load(f)
@@ -126,13 +137,10 @@ def load_all_models():
         # Fallback: Check old structure (models/ directly)
         if not multiclass_models and not binary_models:
             for file in os.listdir('models/'):
-                if file.endswith('.pkl') and file not in ['scaler.pkl', 'feature_names.pkl', 
-                                                           'multiclass_scaler.pkl', 'binary_scaler.pkl',
-                                                           'multiclass_feature_names.pkl', 'binary_feature_names.pkl']:
+                if file.endswith('.pkl') and file not in EXCLUDE_FILES:
                     model_name = file.replace('.pkl', '').replace('_', ' ').title()
                     with open(f'models/{file}', 'rb') as f:
                         model = pickle.load(f)
-                        # Add to both for compatibility
                         multiclass_models[model_name] = model
                         binary_models[model_name] = model
             
@@ -161,17 +169,23 @@ def load_all_models():
                     with open(f'models/{feat_name}', 'rb') as f:
                         binary_features = pickle.load(f)
                     break
+            
+            # Load label encoder
+            if os.path.exists('models/label_encoder.pkl'):
+                with open('models/label_encoder.pkl', 'rb') as f:
+                    label_encoder = pickle.load(f)
         
-        return multiclass_models, binary_models, multiclass_scaler, binary_scaler, multiclass_features, binary_features
+        return (multiclass_models, binary_models, multiclass_scaler, 
+                binary_scaler, multiclass_features, binary_features, label_encoder)
     
     except Exception as e:
         st.error(f"Error loading models: {e}")
-        return None, None, None, None, None, None
+        return None, None, None, None, None, None, None
 
 # Load all models
 (multiclass_models, binary_models, 
  multiclass_scaler, binary_scaler, 
- multiclass_features, binary_features) = load_all_models()
+ multiclass_features, binary_features, label_encoder) = load_all_models()
 
 # =============================================================================
 # CHECK IF MODELS LOADED
@@ -179,7 +193,7 @@ def load_all_models():
 if (not multiclass_models and not binary_models):
     st.error("⚠️ No models found! Please save models first.")
     
-    st.markdown("### 📋 How to Save Models")
+    st.markdown("### 📚 How to Save Models")
     
     with st.expander("Click to see model saving instructions", expanded=True):
         st.code("""
@@ -195,11 +209,11 @@ os.makedirs('models/binary', exist_ok=True)
 
 # ============ SAVE MULTI-CLASS MODELS ============
 print("Saving Multi-class models...")
-for name, model in multiclass_models.items():
-    filename = name.replace('. ', '_').replace(' ', '_').lower()
+for name, model in multiclass_trained_models.items():
+    filename = name.lower().replace(' ', '_').replace('-', '_')
     with open(f'models/multiclass/{filename}.pkl', 'wb') as f:
         pickle.dump(model, f)
-    print(f"  ✓ Saved: {filename}.pkl")
+    print(f"  ✅ Saved: {filename}.pkl")
 
 with open('models/multiclass/scaler.pkl', 'wb') as f:
     pickle.dump(multiclass_scaler, f)
@@ -207,15 +221,18 @@ with open('models/multiclass/scaler.pkl', 'wb') as f:
 with open('models/multiclass/feature_names.pkl', 'wb') as f:
     pickle.dump(multiclass_feature_names, f)
 
+with open('models/multiclass/label_encoder.pkl', 'wb') as f:
+    pickle.dump(label_encoder, f)
+
 print("✅ Multi-class models saved!")
 
 # ============ SAVE BINARY MODELS ============
 print("\\nSaving Binary models...")
-for name, model in binary_models.items():
-    filename = name.replace('. ', '_').replace(' ', '_').lower()
+for name, model in binary_trained_models.items():
+    filename = name.lower().replace(' ', '_').replace('-', '_')
     with open(f'models/binary/{filename}.pkl', 'wb') as f:
         pickle.dump(model, f)
-    print(f"  ✓ Saved: {filename}.pkl")
+    print(f"  ✅ Saved: {filename}.pkl")
 
 with open('models/binary/scaler.pkl', 'wb') as f:
     pickle.dump(binary_scaler, f)
@@ -234,16 +251,17 @@ print("\\n🎉 All models saved! Run: streamlit run streamlit_app.py")
     ├── streamlit_app.py
     └── models/
         ├── multiclass/
-        │   ├── 1_logistic_regression.pkl
-        │   ├── 2_decision_tree.pkl
-        │   ├── 3_random_forest.pkl
+        │   ├── logistic_regression.pkl
+        │   ├── decision_tree.pkl
+        │   ├── random_forest.pkl
         │   ├── ...
         │   ├── scaler.pkl
-        │   └── feature_names.pkl
+        │   ├── feature_names.pkl
+        │   └── label_encoder.pkl
         └── binary/
-            ├── 1_logistic_regression.pkl
-            ├── 2_decision_tree.pkl
-            ├── 3_random_forest.pkl
+            ├── logistic_regression.pkl
+            ├── decision_tree.pkl
+            ├── random_forest.pkl
             ├── ...
             ├── scaler.pkl
             └── feature_names.pkl
@@ -254,10 +272,10 @@ print("\\n🎉 All models saved! Run: streamlit run streamlit_app.py")
 # =============================================================================
 # SIDEBAR - CLASSIFICATION TYPE & MODEL SELECTION
 # =============================================================================
-st.sidebar.markdown("## Configuration")
+st.sidebar.markdown("## ⚙️ Configuration")
 
 # Classification Type Selection
-st.sidebar.markdown("### Classification Type")
+st.sidebar.markdown("### 📊 Classification Type")
 classification_type = st.sidebar.radio(
     "Select prediction type:",
     ["🎯 Multi-Class (4 Levels)", "⚖️ Binary (LOW/HIGH)"],
@@ -269,14 +287,17 @@ is_multiclass = "Multi-Class" in classification_type
 st.sidebar.markdown("---")
 
 # Model Selection based on classification type
-st.sidebar.markdown("### Model Selection")
+st.sidebar.markdown("### 🤖 Model Selection")
 
 if is_multiclass:
     if multiclass_models:
+        model_list = list(multiclass_models.keys())
+        # Safe default index
+        default_idx = min(2, len(model_list) - 1) if len(model_list) > 2 else 0
         selected_model = st.sidebar.selectbox(
             "Choose Multi-Class Model:",
-            list(multiclass_models.keys()),
-            index=2, 
+            model_list,
+            index=default_idx,
             help="Select a trained model for 4-class severity prediction"
         )
         current_models = multiclass_models
@@ -287,10 +308,13 @@ if is_multiclass:
         st.stop()
 else:
     if binary_models:
+        model_list = list(binary_models.keys())
+        # Safe default index
+        default_idx = min(2, len(model_list) - 1) if len(model_list) > 2 else 0
         selected_model = st.sidebar.selectbox(
             "Choose Binary Model:",
-            list(binary_models.keys()),
-            index=4,  
+            model_list,
+            index=default_idx,
             help="Select a trained model for LOW/HIGH prediction"
         )
         current_models = binary_models
@@ -302,7 +326,7 @@ else:
 
 # Display model info
 st.sidebar.markdown("---")
-st.sidebar.markdown("### Classification Info")
+st.sidebar.markdown("### ℹ️ Classification Info")
 
 if is_multiclass:
     st.sidebar.info("""
@@ -325,14 +349,14 @@ else:
     """)
 
 st.sidebar.markdown("---")
-st.sidebar.markdown(f"**Selected Model:** {selected_model}")
-st.sidebar.markdown(f"**Models Loaded:** {len(current_models)}")
+st.sidebar.markdown(f"**🎯 Selected Model:** {selected_model}")
+st.sidebar.markdown(f"**📦 Models Loaded:** {len(current_models)}")
 
 # =============================================================================
 # MAIN CONTENT - INPUT FORM
 # =============================================================================
 st.markdown("---")
-st.markdown("## Enter Accident Details")
+st.markdown("## 📝 Enter Accident Details")
 
 # Create three columns for inputs
 col1, col2, col3 = st.columns(3)
@@ -344,37 +368,37 @@ with col1:
     st.markdown("### 🌤️ Weather Conditions")
     
     inputs['Temperature(F)'] = st.slider(
-        "Temperature (°F)", 
+        "🌡️ Temperature (°F)", 
         min_value=-20, max_value=120, value=70,
         help="Ambient temperature at accident location"
     )
     
     inputs['Humidity(%)'] = st.slider(
-        "Humidity (%)", 
+        "💧 Humidity (%)", 
         min_value=0, max_value=100, value=50,
         help="Relative humidity percentage"
     )
     
     inputs['Pressure(in)'] = st.slider(
-        "Pressure (in)", 
+        "📊 Pressure (in)", 
         min_value=28.0, max_value=31.0, value=29.9, step=0.1,
         help="Atmospheric pressure in inches"
     )
     
     inputs['Visibility(mi)'] = st.slider(
-        "Visibility (mi)", 
+        "👁️ Visibility (mi)", 
         min_value=0.0, max_value=10.0, value=10.0, step=0.5,
         help="Visibility distance in miles"
     )
     
     inputs['Wind_Speed(mph)'] = st.slider(
-        "Wind Speed (mph)", 
+        "💨 Wind Speed (mph)", 
         min_value=0, max_value=60, value=5,
         help="Wind speed at location"
     )
     
     inputs['Precipitation(in)'] = st.slider(
-        "Precipitation (in)", 
+        "🌧️ Precipitation (in)", 
         min_value=0.0, max_value=5.0, value=0.0, step=0.1,
         help="Precipitation amount"
     )
@@ -384,7 +408,7 @@ with col2:
     st.markdown("### 🛣️ Road Features")
     
     inputs['Distance(mi)'] = st.slider(
-        "Affected Road Distance (mi)", 
+        "📏 Affected Road Distance (mi)", 
         min_value=0.0, max_value=10.0, value=0.5, step=0.1,
         help="Length of road affected by accident"
     )
@@ -417,13 +441,13 @@ with col3:
     
     # Date and Time inputs
     accident_date = st.date_input(
-    "Accident Date", 
-    datetime(2022, 12, 15),  
-    help="Date of the accident"
+        "📅 Accident Date", 
+        datetime(2022, 12, 15),
+        help="Date of the accident"
     )
     
     accident_time = st.time_input(
-        "Accident Time", 
+        "🕐 Accident Time", 
         dt_time(7, 0),
         help="Time of the accident"
     )
@@ -440,7 +464,7 @@ with col3:
     inputs['is_morning_peak'] = 1 if 6 <= accident_time.hour <= 9 else 0
     inputs['is_evening_peak'] = 1 if 16 <= accident_time.hour <= 19 else 0
     
-    st.markdown("**Weather Conditions:**")
+    st.markdown("**🌦️ Weather Conditions:**")
     
     weather_col1, weather_col2 = st.columns(2)
     
@@ -509,8 +533,12 @@ if predict_button:
         # MULTI-CLASS RESULTS
         # =================================================================
         if is_multiclass:
-            # Convert 0-3 to 1-4
-            severity = int(prediction) + 1
+            # Convert prediction to original severity using label encoder
+            if label_encoder is not None:
+                severity = label_encoder.inverse_transform([int(prediction)])[0]
+            else:
+                # Fallback: assume 0-3 maps to 1-4
+                severity = int(prediction) + 1
             
             # Define colors and labels
             severity_info = {
@@ -520,7 +548,7 @@ if predict_button:
                 4: {"color": "#dc3545", "bg": "#f8d7da", "label": "Severe Impact", "emoji": "🔴"}
             }
             
-            info = severity_info[severity]
+            info = severity_info.get(severity, severity_info[1])
             
             # Display main prediction
             st.markdown(f"""
@@ -539,19 +567,26 @@ if predict_button:
             
             prob_cols = st.columns(4)
             for i, (col, prob) in enumerate(zip(prob_cols, probabilities)):
-                sev = i + 1
-                s_info = severity_info[sev]
+                if label_encoder is not None:
+                    sev = label_encoder.classes_[i]
+                else:
+                    sev = i + 1
+                s_info = severity_info.get(sev, severity_info[1])
                 with col:
                     st.metric(
                         label=f"{s_info['emoji']} Level {sev}",
                         value=f"{prob*100:.1f}%",
-                        delta="PREDICTED" if sev == severity else None
+                        delta="✅ PREDICTED" if sev == severity else None
                     )
             
             # Probability bar chart
             st.markdown("### 📊 Probability Distribution")
+            if label_encoder is not None:
+                labels = [f"Level {c}" for c in label_encoder.classes_]
+            else:
+                labels = [f"Level {i+1}" for i in range(4)]
             prob_df = pd.DataFrame({
-                'Severity Level': [f"Level {i+1}" for i in range(4)],
+                'Severity Level': labels,
                 'Probability (%)': probabilities * 100
             })
             st.bar_chart(prob_df.set_index('Severity Level'))
@@ -599,14 +634,14 @@ if predict_button:
                 st.metric(
                     label="🔵 LOW Severity (1,2)",
                     value=f"{probability_low*100:.1f}%",
-                    delta="PREDICTED" if not is_high else None
+                    delta="✅ PREDICTED" if not is_high else None
                 )
             
             with prob_cols[1]:
                 st.metric(
                     label="🔴 HIGH Severity (3,4)",
                     value=f"{probability_high*100:.1f}%",
-                    delta="PREDICTED" if is_high else None
+                    delta="✅ PREDICTED" if is_high else None
                 )
             
             # Probability gauge
@@ -639,14 +674,14 @@ if predict_button:
             summary_col1, summary_col2, summary_col3 = st.columns(3)
             
             with summary_col1:
-                st.markdown("**Weather:**")
+                st.markdown("**🌤️ Weather:**")
                 st.write(f"• Temperature: {inputs['Temperature(F)']}°F")
                 st.write(f"• Humidity: {inputs['Humidity(%)']}%")
                 st.write(f"• Visibility: {inputs['Visibility(mi)']} mi")
                 st.write(f"• Wind Speed: {inputs['Wind_Speed(mph)']} mph")
             
             with summary_col2:
-                st.markdown("**Road Features:**")
+                st.markdown("**🛣️ Road Features:**")
                 road_features = ['Crossing', 'Junction', 'Traffic_Signal', 'Stop', 'Roundabout']
                 active_features = [f for f in road_features if inputs.get(f, 0) == 1]
                 if active_features:
@@ -656,10 +691,10 @@ if predict_button:
                     st.write("• No special features")
             
             with summary_col3:
-                st.markdown("**Time & Conditions:**")
+                st.markdown("**⏰ Time & Conditions:**")
                 st.write(f"• Date: {accident_date}")
                 st.write(f"• Time: {accident_time}")
-                st.write(f"• Weekend: {'Yes' if inputs['is_weekend'] else 'No'}")
+                st.write(f"• Weekend: {'Yes ✅' if inputs['is_weekend'] else 'No'}")
                 weather_flags = ['is_rain', 'is_fog', 'is_snow', 'is_night']
                 active_weather = [f.replace('is_', '').title() for f in weather_flags if inputs.get(f, 0) == 1]
                 if active_weather:
@@ -683,9 +718,9 @@ st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #666; padding: 20px;">
     <p>🚗 <strong>US Accident Severity Predictor</strong></p>
-    <p>Built with Streamlit & Machine Learning</p>
+    <p>Built with ❤️ using Streamlit & Machine Learning</p>
     <p style="font-size: 0.8rem;">
-        Multi-class: 4 severity levels (1-4) | Binary: LOW vs HIGH severity
+        🎯 Multi-class: 4 severity levels (1-4) | ⚖️ Binary: LOW vs HIGH severity
     </p>
 </div>
 """, unsafe_allow_html=True)
