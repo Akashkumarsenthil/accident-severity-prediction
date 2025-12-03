@@ -276,6 +276,7 @@ if is_multiclass:
         selected_model = st.sidebar.selectbox(
             "Choose Multi-Class Model:",
             list(multiclass_models.keys()),
+            index=3,  # 👈 This sets the 2nd item as default (0-indexed)
             help="Select a trained model for 4-class severity prediction"
         )
         current_models = multiclass_models
@@ -289,6 +290,7 @@ else:
         selected_model = st.sidebar.selectbox(
             "Choose Binary Model:",
             list(binary_models.keys()),
+            index=4,  
             help="Select a trained model for LOW/HIGH prediction"
         )
         current_models = binary_models
