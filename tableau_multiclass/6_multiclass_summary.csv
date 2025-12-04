@@ -1,6 +1,6 @@
 Model,Accuracy,Precision,Recall,F1_Score,Training_Time,Rank
-Gradient Boosting,0.7229,0.7181,0.7229,0.7176,283.81,1
-Random Forest,0.7189,0.7164,0.7189,0.7119,7.41,2
-Decision Tree,0.6715,0.6639,0.6715,0.6666,3.24,3
-K-Nearest Neighbors,0.5394,0.5279,0.5394,0.5256,18.43,4
-Logistic Regression,0.497,0.4869,0.497,0.4853,4.52,5
+Gradient Boosting,0.7229,0.7181,0.7229,0.7176,292.23,1
+Random Forest,0.7189,0.7164,0.7189,0.7119,6.93,2
+Decision Tree,0.6715,0.6639,0.6715,0.6666,1.18,3
+K-Nearest Neighbors,0.5394,0.5279,0.5394,0.5256,19.78,4
+Logistic Regression,0.497,0.4869,0.497,0.4853,3.25,5
